@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Game Categories</title>
+</head>
+<style>
+    body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: small;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #080707;
+        }
+        
+        #categoryForm {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+    
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 1px;
+            color: #555;
+        }
+        
+        select {
+            width: 100%;
+            padding: 1px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+        
+        button {
+            display: block;
+            width: 100%;
+            padding: 5px;
+            font-size: 16px;
+            background-color: rgb(25,2,59);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        
+</style>
+<body>
+    <h1>Select a Category:</h1>
+    <form id="categoryForm">
+        <label for="categories">Choose a category:</label>
+        <select id="categories" name="categories">
+            <option value="9">General Knowledge</option>
+            <option value="10">Books</option>
+            <option value="11">Film</option>
+            <option value="12">Music</option>
+            <option value="13">Musicals & Theatres</option>
+            <option value="14">Television</option>
+            <option value="15">Video Games</option>
+            <option value="16">Board Games</option>
+            <option value="17">Science & Nature</option>
+            <option value="18">Computers</option>
+            <option value="19">Mathematics</option>
+            <option value="20">Mythology</option>
+            <option value="21">Sports</option>
+            <option value="22">Geography</option>
+            <option value="23">History</option>
+            <option value="24">Politics</option>
+            <option value="25">Art</option>
+            <option value="26">Celebrities</option>
+            <option value="27">Animals</option>
+            <option value="28">Vehicles</option>
+            <option value="29">Comics</option>
+            <option value="30">Gadgets</option>
+            <option value="31">Japanese Anime & Manga</option>
+            <option value="32">Cartoon & Animations</option>
+        </select>
+        <button type="submit">Start Quiz</button>
+    </form>
+
+    
+
+
+<script>
+     document.getElementById('categoryForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting in the traditional way
+            const selectedCategory = document.getElementById('categories').value;
+            localStorage.setItem('selectedCategory', selectedCategory);
+            window.location.href = 'index.html';
+     });
+</script>
+
+</body>
+</html>
